@@ -6,10 +6,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
-"""this helps to access websites that don't like web scraping."""
-
 ## Class to get the raw html data from a provided URL
 class RawData:
     def scrape(url):
@@ -31,6 +27,6 @@ class InputOutput:
         return urls
     
     def write_to_file(article, filename):
-        """Write the article to a .txt file"""
+        ##Write the article to a .txt file
         with open(filename, 'w', encoding='utf-8') as file:
             file.write(article)
