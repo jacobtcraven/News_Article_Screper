@@ -13,8 +13,9 @@ HEADERS = {
 ## Class to get the raw html data from a provided URL
 class RawData:
     def scrape(url):
+        
         ## Scrape the page source from the URL
-        response = requests.get(url, headers=HEADERS)
+        response = requests.get(url)
         lookUp = BeautifulSoup(response.text, 'html.parser')
 
         ## return html as BeautifulSoup object
@@ -33,9 +34,3 @@ class InputOutput:
         """Write the article to a .txt file"""
         with open(filename, 'w', encoding='utf-8') as file:
             file.write(article)
-
-    # def read_file(filename):
-    #     """Read lines from a file and return them as a string"""
-    #     with open(filename, 'r', encoding='utf-8') as file:
-    #         lines = file.readlines()
-    #     return lines

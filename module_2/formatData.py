@@ -8,8 +8,8 @@ from bs4 import BeautifulSoup
 class FormatData:
     ## Removes the html tags from the raw data
     def remove_html(raw):
-        article = raw.find("div", class_='caas-body')
-        return article.get_text()
+        text = raw.find("div", class_='caas-body')
+        return text.get_text()
     
     ## Add a new line for every 20 words in the article
     def add_newlines(article):

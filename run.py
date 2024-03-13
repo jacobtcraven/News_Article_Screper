@@ -2,7 +2,7 @@
 
 ## Import needed classes and functions
 from module_1.RawData import RawData, InputOutput
-from module_2.formatData import FormatData
+from module_2.FormatData import FormatData
 
 
 if __name__ == '__main__':
@@ -18,9 +18,6 @@ if __name__ == '__main__':
 
         ## Write html to raw file
         InputOutput.write_to_file(str(source), f'Data/raw/raw{counter}.txt')
-
-        ## Read the raw file
-        # html = InputOutput.read_file(f'Data/raw/raw{counter}.txt')
 
         ## Format the raw file
         formatted = FormatData.remove_html(source)
